@@ -1,0 +1,18 @@
+version: '2.2'
+services:
+
+  mongodb:
+    container_name: "mongodb_streams"
+    image: "mongo:latest"
+    volumes:
+      - mongodb_data_container:/data/db
+    ports:
+      - "27017:27017"
+    #command: --smallfiles --rest
+
+volumes:
+  mongodb_data_container:
+
+networks:
+  elastic:
+    driver: bridge
