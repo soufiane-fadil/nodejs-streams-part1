@@ -16,7 +16,7 @@ import UserInfoModel from "./db/user.js";
 const main = async () => {
   // save data to database
   await mongoose.connect(
-    "mongodb+srv://demi:demi@cluster0.qidj8mr.mongodb.net/snailpa?retryWrites=true&w=majority"
+    "mongodb+srv://?@cluster0.qidj8mr.mongodb.net/yourdb?retryWrites=true&w=majority"
   );
 
   const readStream = fs.createReadStream("./data/import.csv", {
